@@ -407,7 +407,7 @@ jobs:
             ${{ github.workspace }}/**/*
 
       - name: Attest Release Files
-        uses: actions/attest-build-provenance@v3
+        uses: actions/attest-build-provenance@v4
         with:
           subject-path: |
             ${{ github.workspace }}/**/*
