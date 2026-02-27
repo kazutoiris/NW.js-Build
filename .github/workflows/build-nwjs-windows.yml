@@ -113,7 +113,7 @@ jobs:
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v7
         with:
-          name: build-cache
+          archive: false
           overwrite: true
           if-no-files-found: error
           path: artifact.tzst
@@ -152,7 +152,8 @@ jobs:
       - name: Download Artifact
         uses: actions/download-artifact@v8
         with:
-          name: build-cache
+          skip-decompress: true
+          name: artifact.tzst
 
       - name: Decompress Artifact
         shell: bash
@@ -176,7 +177,7 @@ jobs:
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v7
         with:
-          name: build-cache
+          archive: false
           overwrite: true
           if-no-files-found: error
           path: artifact.tzst
