@@ -150,7 +150,7 @@ jobs:
         uses: newkdev/setup-depot-tools@v1.0.1
 
       - name: Download Artifact
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: build-cache
 
@@ -391,7 +391,7 @@ jobs:
     env: *env
     steps:
       - name: Download Artifact
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: nw-dist
 
